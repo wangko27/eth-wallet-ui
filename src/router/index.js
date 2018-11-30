@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Dashboard from '@/components/Dashboard'
 import Wallet from '@/components/wallet/Wallet'
 import Peers from '@/components/peers/Peers'
+import SystemLog from '@/components/SystemLog'
 
 Vue.use(Router)
 
@@ -17,6 +18,7 @@ export default new Router({
       ]
     },
     {path: '/wallet', component: Wallet},
-    {path: '/peers', component: Peers}
+    {path: '/peers', component: Peers},
+    {path: '/logs', component: SystemLog}
   ]
 })

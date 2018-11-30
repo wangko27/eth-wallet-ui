@@ -3,33 +3,33 @@
     <nav class="height-100p">
       <ul class="nav luna-nav">
 
-        <li ng-class="{active: vm.data.currentPage == '/'}" class="active">
+        <router-link tag="li" to="/latest" active-class="active">
           <a href="/">Home</a>
-        </li>
+        </router-link>
 
-        <li ng-class="{active: vm.data.currentPage == '/peers'}">
+        <router-link tag="li" to="/peers" active-class="active">
           <a href="/peers">Ethereum Peers</a>
-        </li>
+        </router-link>
 
-        <li ng-class="{active: vm.data.currentPage == '/systemLog'}">
+        <router-link tag="li" to="/logs" active-class="active">
           <a href="/systemLog">System Logs</a>
-        </li>
+        </router-link>
 
-        <li ng-class="{active: vm.data.currentPage == '/rpcUsage'}">
+        <router-link tag="li" to="/rpcUsage" active-class="active">
           <a href="/rpcUsage">JSON-RPC Usage</a>
-        </li>
+        </router-link>
 
-        <li ng-class="{active: vm.data.currentPage == '/terminal'}" ng-show="vm.data.featureRpc" class="">
+        <router-link tag="li" to="/terminal" active-class="active">
           <a href="/terminal">Terminal</a>
-        </li>
+        </router-link>
 
-        <li ng-class="{active: vm.data.currentPage == '/wallet'}">
+        <router-link tag="li" to="/wallet" active-class="active">
           <a href="/wallet">Wallet</a>
-        </li>
+        </router-link>
 
-        <li ng-class="{active: vm.data.currentPage == '/contracts'}" ng-show="vm.data.featureContracts" class="">
+        <router-link tag="li" to="/contracts" active-class="active">
           <a href="/contracts">Contracts</a>
-        </li>
+        </router-link>
 
         <div class="text-center m-l-md m-r-md m-t-lg" ng-hide="!vm.data.privateNetwork">
           <h5 class="c-yellow"><i class="fa fa-gears m-r-sm"></i>Private network</h5>
@@ -54,7 +54,8 @@
           </div>
           <div class="">
             <div class="progress m-t-xs full progress-small">
-              <div id="cpuUsageProgress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="29" role="progressbar" class="width-0p progress-bar progress-bar-warning" style="width: 29%;">
+              <div id="cpuUsageProgress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="29" role="progressbar"
+                   class="width-0p progress-bar progress-bar-warning" style="width: 29%;">
                 <span class="sr-only ng-binding">29%</span>
               </div>
             </div>
@@ -66,7 +67,8 @@
           </div>
           <div class="">
             <div class="progress m-t-xs full progress-small">
-              <div id="memoryUsageProgress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="58" role="progressbar" class="width-0p progress-bar progress-bar-warning" style="width: 58%;">
+              <div id="memoryUsageProgress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="58" role="progressbar"
+                   class="width-0p progress-bar progress-bar-warning" style="width: 58%;">
                 <span class="sr-only ng-binding">1.09 GB</span>
               </div>
             </div>
@@ -78,7 +80,8 @@
           </div>
           <div class="">
             <div class="progress m-t-xs full progress-small">
-              <div id="diskUsageProgress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" class="width-0p progress-bar progress-bar-warning" style="width: 0%;">
+              <div id="diskUsageProgress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar"
+                   class="width-0p progress-bar progress-bar-warning" style="width: 0%;">
                 <span class="sr-only ng-binding">3.88 MB</span>
               </div>
             </div>
@@ -101,9 +104,9 @@
 </template>
 
 <script>
-    export default {
-        name: "Navigation"
-    }
+  export default {
+    name: "Navigation"
+  }
 </script>
 
 <style scoped>
