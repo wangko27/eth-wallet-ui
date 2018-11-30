@@ -9,17 +9,20 @@
     <!-- End NAVIGATION-->
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <Dashboard></Dashboard>
+    <div id="main">
+      <section class="content">
+        <router-view></router-view>
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
   import Navbar from '@/components/Navbar'
   import Navigation from '@/components/Navigation'
-  import Dashboard from '@/components/Dashboard'
 
   export default {
     name: 'App',
-    components: {Navbar, Navigation, Dashboard},
+    components: {Navbar, Navigation},
   }
 </script>
