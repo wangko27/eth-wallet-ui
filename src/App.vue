@@ -1,23 +1,25 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="app" class="wrapper">
+    <!-- Header-->
+    <Navbar></Navbar>
+    <!-- End header-->
+
+    <!-- NAVIGATION-->
+    <Navigation></Navigation>
+    <!-- End NAVIGATION-->
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <Dashboard></Dashboard>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
-</script>
+  import Navbar from '@/components/Navbar'
+  import Navigation from '@/components/Navigation'
+  import Dashboard from '@/components/Dashboard'
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  export default {
+    name: 'App',
+    components: {Navbar, Navigation, Dashboard},
+  }
+</script>
