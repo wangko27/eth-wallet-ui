@@ -541,7 +541,7 @@ fieldset[disabled] .btn-danger.focus {
 }
 
 .content > div {
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .pace {
